@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Skytree One;
+  src: url(fonts/skytree-one.ttf);
+}
+body {
+  color: white;
+  font-family: Skytree One;
+  letter-spacing: 4px;
+  background-color: rgb(255, 157, 28);
+  user-select: none;
+  cursor: none;
+}
+.hammer img {
+  position: absolute;
+  width: 60px;
+  margin-top: -25px;
+  z-index: 5;
+  transition: 0.1s;
+  transition-property: background, transform;
+  pointer-events: none;
+}
+.punch {
+  transform: rotate(-50deg);
+}
+.header {
+  position: relative;
+  margin: auto;
+  width: 30rem;
+  height: 5rem;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+.header .whack {
+  width: 20rem;
+  position: absolute;
+  left: 0;
+  text-align: right;
+}
+.header .whack h1 {
+  font-size: 43px;
+}
+.header .whack .start {
+  border: transparent 0 solid;
+  font-size: 20px;
+  cursor: none;
+  border-left: rgb(34, 15, 0) 3px solid;
+  padding: 5px;
+  transition: 0.2s;
+}
+.header .whack .start:focus {
+  outline: transparent;
+}
+.header .whack .start:hover {
+  background-color: rgb(34, 15, 0);
+  color: white;
+}
+.header .score {
+  width: 10rem;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.header .score h2 {
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+  border: white 4px solid;
+  text-align: center;
+  font-family: Skytree One;
+}
+.container {
+  width: 44rem;
+  margin: 1rem auto 0;
+  position: relative;
+}
+.container .colum {
+  width: 13rem;
+  height: 13rem;
+  display: inline-block;
+  margin: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.container .colum .soil img {
+  width: 13rem;
+  height: 5rem;
+  z-index: 3;
+  position: absolute;
+  bottom: -20px;
+  -webkit-user-drag: none;
+}
+.container .colum .mole img {
+  height: 7rem;
+  position: absolute;
+  transition: 0.1s;
+  left: 20%;
+  -webkit-user-drag: none;
+}
+/* class Tambahan JavaScript */
+.playing {
+  background-color: black;
+  pointer-events: none;
+  color: white;
+}
+.ended {
+  background-color: transparent;
+  color: black;
+}
+.down {
+  bottom: -70px;
+  z-index: 2;
+}
+.up {
+  bottom: 18px;
+  z-index: 2;
+}
